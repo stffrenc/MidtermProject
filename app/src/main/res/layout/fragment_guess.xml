@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/guess_layout"
+    tools:context=".GuessFragment">
+    <data>
+        <variable name="viewModel" type="com.example.midtermproject.GameViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Player name: " />
+
+            <EditText
+                android:id="@+id/player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="text"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Enter your guess: "
+            android:textSize="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/decrementButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="null"
+                android:layout_weight="1"
+                android:src="@drawable/subtraction" />
+
+            <EditText
+                android:id="@+id/num_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="81dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@{viewModel.guess}" />
+
+            <ImageButton
+                android:id="@+id/incrementButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="null"
+                android:layout_weight="1"
+                android:src="@drawable/addition" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Ok"
+            android:textColor="@color/Black"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+</layout>
