@@ -7,16 +7,16 @@ plugins {
 
 android {
     namespace = "com.example.midtermproject"
-    compileSdk = 33
+    compileSdk = 34
 
     dataBinding{
         enable = true
     }
 
     defaultConfig {
-        applicationId = "com.example.project6"
+        applicationId = "com.example.midtermproject"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -64,6 +64,7 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     implementation ("androidx.room:room-runtime:$room_version")
     implementation ("androidx.room:room-ktx:$room_version")
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
     ksp("androidx.room:room-compiler:2.4.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

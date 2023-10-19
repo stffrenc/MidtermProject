@@ -12,12 +12,10 @@
         tools:layout="@layout/fragment_main" >
         <argument
             android:name="playerName"
-            app:argType="String"
-            android:defaultValue=""/>
+            app:argType="string"/>
         <argument
             android:name="playerScore"
-            app:argType="integer"
-            android:defaultValue="0"/>
+            app:argType="integer"/>
         <action
             android:id="@+id/action_mainFragment_to_scoresFragment"
             app:destination="@id/scoresFragment" />
@@ -29,7 +27,8 @@
         android:id="@+id/scoresFragment"
         android:name="com.example.midtermproject.ScoresFragment"
         android:label="fragment_scores"
-        tools:layout="@layout/fragment_scores" />
+        tools:layout="@layout/fragment_scores">
+    </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.example.midtermproject.GameFragment"

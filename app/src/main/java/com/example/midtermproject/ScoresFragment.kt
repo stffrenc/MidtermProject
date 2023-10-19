@@ -43,13 +43,13 @@ class ScoresFragment : Fragment() {
         }
 
 
-        val adapter = ScoreItemAdapter(::scoreClicked,::deleteClicked)
+        val adapter = ScoreItemAdapter(::deleteClicked)
 
         val recyclerView = binding.scoresList
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.scoresList.adapter = adapter
 
-        viewModel.notes.observe(viewLifecycleOwner, Observer {
+        viewModel.scores.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
             }
